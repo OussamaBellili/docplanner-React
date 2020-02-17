@@ -1,0 +1,542 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+*{
+  margin: 0;
+  padding: 0px;
+}
+body {
+  font-size: 16px;
+  font-family: Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  color: #747474;
+  margin: 0;
+  padding-top: 70px;
+}
+/* header  */
+.sticky-header {
+  box-shadow: 0 -2px 10px 0 rgba(0,0,0,.15);
+}
+.docplanner-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-wrap: wrap;
+  background-color: white;
+  border-bottom: 1px solid #eef2f2;
+  z-index: 2;
+}
+.logo-docplanner {
+  width: 265px;
+  height: 30px;
+}
+a {
+  color: #747474;
+  text-decoration: none;
+}
+.nav-bar {
+  padding: 25px 0;
+  height: 100%;
+  color: #b8b4b4;
+  font-size: 15px;
+
+}
+.nav-bar-sections {
+  display: flex;
+}
+.activated-link {
+  color: #00b39b;
+  padding: 0 10px;
+}
+.career-button {
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+.career-button:hover {
+  color: #00b39b;
+}
+.dep-button {
+  padding: 0 10px;
+  height: 100%;
+  position: relative;
+  
+}
+.dep-button:hover {
+  color: #00b39b;
+}
+li {
+  list-style: none;
+}
+/* drop the menu  */
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  line-height: 120%;
+  top: 20;
+  right: 0;
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 255px;
+  height: 220px;
+  align-items: center;
+}
+.menu-dropdown-list {
+  color: #747474;
+  display: block;
+  width: 227px;
+  line-height: 120%;
+  padding: 10px 14px;
+  
+}
+.menu-dropdown-list:hover {
+  color: #00b39b;
+  background-color: #f6f8f8;
+}
+.dep-button:hover .menu-dropdown {
+  display: flex;
+  box-shadow: 0 5px 10px 0 #d3cfc9;
+  background-color: white;
+  color: rgb(0, 179, 155);
+}
+/* introduction section  */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 35px 70px;
+}
+.intro-title {
+  display: flex;
+  font-weight: 100;
+  font-size: 35px;
+  justify-content: center;
+  color: #00b39b;
+  margin: 30px 0;
+  letter-spacing: .3px;
+}
+.lead-logo {
+  display: block;
+  margin: 0 33em;
+}
+.description {
+   display: flex;
+   box-sizing: border-box;
+}
+.intro-paragraph {
+  margin: 15px 10px;
+  line-height: 1.75;
+  font-weight: 400;
+  width: 470px;
+  height: 115px;
+  box-sizing: border-box;
+}
+/* service section  */
+.services {
+  display: flex;
+  margin: 35px 170px;
+}
+.service-card {
+  
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  flex: 1;
+  height: 388px;
+  width: 470px;
+  margin: 10px;   
+}
+.service-card-patients {
+  background-color: #00ccb1;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px;
+  
+     
+}
+.service-card-switcher {
+
+  margin-right: 150px;
+  background-color: white;
+  padding: 10px;
+  color:#333;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 6px;
+  border: 0;
+
+  cursor: pointer;
+}
+.service-card-switcher:hover {
+  background-color: #eef2f2;
+}
+.service-card-doctors {
+  background-color: #3d83df;
+  padding: 30px;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  
+}
+.service-card-title {
+  font-size: 1.625em;
+  color:#fff;
+  margin-top: .3em;
+  margin-bottom: .8em;
+}
+.service-card-image {
+  height: 290px;
+  width: 490.5px;
+  position: absolute;
+  left: 150;
+  bottom: 0;
+  
+
+}
+/* partners section */
+.partners {
+  margin: 35px 170px;
+  padding: 0 10px;
+  position: relative;
+  display: flex;
+}
+.description-partner {
+  margin-top: 4px;
+  margin-bottom: 5px;
+  padding-right: 16px;
+  font-weight: 100;
+  font-size: 26px;
+  color: #00b39b;
+  letter-spacing: .3px;
+  width: 30%;
+  box-sizing: border-box;
+}
+.partners-name {
+  width: 70%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.partners-name svg {
+  width: 135px;
+  height: 25px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.partners-name path {
+  fill: #b8b4b4;
+}
+.partners-name path:hover {
+  fill: #00b39b;
+}
+/* numbers section  */
+.numbers {
+  background-image: url("https://www.docplanner.com/img/logo.png");
+  background-repeat: no-repeat;
+  background-position: 46px 300px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #e5faf8;
+  position: relative;
+  border: 1px red;
+}
+.stats {
+  border: 1px royalblue;
+  padding: 0 20px;
+  margin: 0 170px;
+  display: flex;
+}
+/* main description division  */
+.main-description {
+  margin-top: 32px;
+  padding: 10px;
+  width: 50%;
+  height: 192px;
+  box-sizing: border-box;
+}
+.main-description h4 {
+  font-size: 34px;
+  color:#00b39b;
+  font-weight: 300;
+  letter-spacing: .3px;
+}
+.main-description p {
+  margin: 25px 0;
+  max-width: 415px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7
+}
+/* column of numbers  */
+.col-numbers {
+  width: 50%;
+  display: flex;
+
+}
+/* appointments' and leader's division */
+.patients-leader {
+  margin-top: 20px; 
+  margin-bottom: 10px;
+  
+}
+
+/* Leader's divison */
+.numbers-leader {
+  border-style: 1px green;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0rgba(0,0,0,.05);
+  height: 250px;
+  width: 229px;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  box-sizing: border-box;
+  margin: 0 15px 15px 0;
+  
+} 
+.numbers-leader h5 {
+  font-size: 25px;
+  color:#00b39b;
+  font-weight: 300;
+  letter-spacing: .3px;
+  margin: 8px 0;
+}
+.numbers-leader p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7
+}
+
+/* appointments division */
+.numbers-appointments {
+  border-style: 1px green;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0rgba(0,0,0,.05);
+  height: 250px;
+  width: 229px;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  box-sizing: border-box;
+  margin: 0 15px 15px 0;
+  
+  
+
+  
+}
+.numbers-appointments h5 {
+  font-size: 25px;
+  color:#00b39b;
+  font-weight: 300;
+  letter-spacing: .3px;
+  margin: 8px 0;
+}
+.numbers-appointments p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7
+}
+/* patients and doctors division */
+.patients-doctors {
+  display: flex;
+  padding: 10px;
+}
+/* patients division */
+.numbers-patients {
+  border-style: 1px green;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0rgba(0,0,0,.05);
+  height: 250px;
+  width: 229px;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  box-sizing: border-box;
+  margin: 0 15px 15px 0;
+ 
+ 
+
+}
+.numbers-patients h5 {
+  font-size: 25px;
+  color:#00b39b;
+  font-weight: 300;
+  letter-spacing: .3px;
+  margin: 8px 0;
+}
+.numbers-patients p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7
+}
+/* doctors' division */
+.numbers-doctors {
+  border-style: 1px green;
+  background:#fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px 0rgba(0,0,0,.05);
+  height: 250px;
+  width: 229px;
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  box-sizing: border-box;
+
+  
+  
+  
+}
+.numbers-doctors h5 {
+  font-size: 25px;
+  color:#00b39b;
+  font-weight: 300;
+  letter-spacing: .3px;
+  margin: 8px 0;
+}
+.numbers-doctors p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7
+}
+/* locals section  */
+.locals {
+  margin: 80px 170px;
+  padding: 0 20px;
+}
+
+.locals-description {
+  text-align: center;
+  margin: 0 180px 67px;
+}
+.locals-description h6 {
+  font-size: 34px;
+  font-weight: 300;
+  color: #00b39b;
+}
+.locals-description p {
+  margin: 24px 0;
+  line-height: 2;
+}
+/* locals venues' division */
+.locals-venues {
+  background-color: #fff;
+  width: 319px;
+  margin: 10px;
+  flex-direction: center;
+  align-items: center;
+}
+.locals-venues:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.locals-venues img {
+  width: 311px;
+  height: 278px;
+  border-radius: 4px;
+}
+.local-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.locals-description button {
+  background-color: #427fea;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  line-height: 16px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.locals-description button:hover {
+  background-color: #1662c6;
+  color: #fff;
+}
+.countries-locals-first-section {
+  display: flex;
+}
+.countries-locals-second-section {
+  display: flex;
+}
+
+/* footer  */
+.docplanner-footer {
+  border-top: 1px solid #eef2f2;
+  padding: 16px 20px;
+  max-width: 1015px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 12px;
+  color:#ababab;
+  text-align: center;
+
+}
+.docplanner-footer a {
+  text-decoration: none;
+  color:#3d83df;
+}
+.docplanner-footer p {
+  margin: 8px;
+}
